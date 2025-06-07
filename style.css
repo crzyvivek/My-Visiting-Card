@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  width: 340px;
+  height: 250px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 15px;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 15px;
+  position: absolute;
+  backface-visibility: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+}
+
+.front {
+  text-align: center;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  align-items: flex-start;
+  object-fit: contain;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+h1 {
+  margin: 5px 0 8px 0;
+  font-size: 26px;
+  color: #111;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 18px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.social-icons {
+  margin: 10px 0 20px 0;
+}
+
+.social-icons a {
+  margin: 0 15px;
+  color: #444;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0077b6; /* Blue-ish hover */
+}
+
+.flip-btn {
+  margin-top: auto; /* Push to bottom */
+  padding: 8px 15px;
+  border: none;
+  background-color: #0077b6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 12px;
+  transition: background-color 0.3s;
+}
+
+.flip-btn:hover {
+  background-color: #023e8a;
+}
+
+.back {
+  transform: rotateY(180deg);
+  text-align: center;
+  color: #222;
+}
+
+.back h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0077b6;
+}
+
+.back p {
+  margin: 8px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+.front, .back {
+  width: 100%;
+  height: 100%;
+  background: white; /* light pastel purple */
+  border-radius: 15px;
+  position: absolute;
+  backface-visibility: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  box-shadow: inset 0 0 10px #c5a3d1;
+}
